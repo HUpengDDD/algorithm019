@@ -37,11 +37,14 @@ Redis和LeveDB等中都使用了跳表。
 /*------------------------Queue 和 Priority Queue 分析------------------------*/  
 Queue  
 Queue interface 继承了 Collection 接口，额外提供了插入，获取和检查方法。每个方法有两种形式：一种是操作失败会抛出异常，另一种是返回一个特殊值 null 或 false。  
-        抛出异常         返回特殊值        
-插入      add(e)         offer(e)    
-删除	    remove(e)	    poll(e)    
-检查	    element()	    peek()  
-
+抛出异常               
+ 插入   > add(e)         
+ 删除	  >remove(e)	        
+ 检查	  >element()	    
+返回特殊值  
+插入   >ffer(e)    
+删除	 >poll(e)    
+检查	 >peek()  
 
 PriorityQueue
 PriorityQueue 继承了 AbstractQueue 并实现了 java.io.Serializable，AbstractQueue 实现了 Queue。PriorityQueue 中的队列是通过平衡二叉树堆实现。  
